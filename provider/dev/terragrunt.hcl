@@ -6,7 +6,8 @@ aws_account         = "064173783062"
 aws_region          = "eu-central-1"
 image_tag           = "0.0.1"
 app_count           = 2
-working_dir         =  "../../html"
+working_dir         =  "../../../html"
+
 #github_path_url     = "https://github.com/Yagorus/Demo4_Bot"
 #git_trigger        = "PUSH"
 #git_pattern_branch  = "^refs/heads/terragrunt$"
