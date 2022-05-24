@@ -6,13 +6,14 @@ aws_account         = "064173783062"
 aws_region          = "eu-central-1"
 image_tag           = "0.0.1"
 app_count           = 2
-working_dir         =  "../../../html"
+working_dir         =  "../../html"
 
-#github_path_url     = "https://github.com/Yagorus/Demo4_Bot"
-#git_trigger        = "PUSH"
-#git_pattern_branch  = "^refs/heads/terragrunt$"
-#buildspec_path      = "providers/dev"
-#buildspec_file      = "buildspec.yml"
+github_path_url     = "https://github.com/Yagorus/semester_project"
+git_trigger        = "PUSH"
+git_pattern_branch  = "^refs/heads/main$"
+buildspec_path      = "providers/dev"
+buildspec_file      = "buildspec.yml"
+
 }
 
 inputs = {
@@ -25,6 +26,11 @@ inputs = {
     image_tag           = local.image_tag
     app_count           = local.app_count
     working_dir         = local.working_dir
+    github_path_url     = local.github_path_url
+    git_trigger         = local.git_trigger
+    git_pattern_branch  = local.git_pattern_branch
+    buildspec_file      = local.buildspec_file
+    
 }
 
 remote_state {
