@@ -1,8 +1,8 @@
 resource "null_resource" "build" {
   provisioner "local-exec" {
-    command = "make"
+    command = "make build"
     working_dir = local.working_dir_path
-    interpreter=["bash", "-c"]
+   interpreter=["bash", "-c"]
     environment = {
         TAG = var.image_tag
         REGISTRY_ID = data.aws_caller_identity.current.account_id
