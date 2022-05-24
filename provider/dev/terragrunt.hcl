@@ -11,7 +11,7 @@ working_dir         =  "../../html"
 github_path_url     = "https://github.com/Yagorus/semester_project"
 git_trigger        = "PUSH"
 git_pattern_branch  = "^refs/heads/main$"
-buildspec_path      = "providers/dev"
+buildspec_path      = "../"
 buildspec_file      = "buildspec.yml"
 
 }
@@ -30,6 +30,7 @@ inputs = {
     git_trigger         = local.git_trigger
     git_pattern_branch  = local.git_pattern_branch
     buildspec_file      = local.buildspec_file
+    buildspec_path      = local.buildspec_path
     
 }
 
