@@ -4,7 +4,7 @@ REPOSITORY_REGION ?= eu-central-1
 APP_NAME ?= html
 ENV_NAME ?= dev
 
-REPO_NAME = $(REGISTRY_ID).dkr.ecr.$(REPOSITORY_REGION).amazonaws.com/${APP_NAME}-${ENV_NAME}
+REPO_NAME = $(REGISTRY_ID).dkr.ecr.$(REPOSITORY_REGION).amazonaws.com/$(APP_NAME)-$(ENV_NAME)
 
 .PHONY: build
 build:

@@ -6,3 +6,6 @@ variable "bucket_name" { }
 variable "working_dir" { }
 variable "image_tag" { }
 
+locals {
+  working_dir_path = format("%s-%s", path.cwd , var.working_dir)
+}

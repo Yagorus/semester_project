@@ -1,7 +1,7 @@
 resource "null_resource" "build" {
   provisioner "local-exec" {
-    command = "make build"
-    working_dir = var.working_dir
+    command = "make"
+    working_dir = local.working_dir_path
     interpreter=["bash", "-c"]
     environment = {
         TAG = var.image_tag
