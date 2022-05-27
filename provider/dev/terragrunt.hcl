@@ -8,7 +8,7 @@ image_tag           = "0.0.1"
 app_count           = 2
 working_dir         =  "/home/ubuntu/semester_project/html"
 github_path_url     = "https://github.com/Yagorus/semester_project"
-git_trigger        = "PUSH"s
+git_trigger        = "PUSH"
 buildspec_path      = "providers/dev"
 buildspec_file      = "buildspec.yml"
 }
