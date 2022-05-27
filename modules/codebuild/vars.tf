@@ -7,7 +7,7 @@ variable "buildspec_path" {}
 variable "github_path_url" {}
 variable "git_trigger" { }
 variable "token_git" {  }
-variable "git_pattern_branch" { }
+#variable "git_pattern_branch" { }
 variable "buildspec_file" { }
 
 #vars from outputs ecs module
