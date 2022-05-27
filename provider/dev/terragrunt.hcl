@@ -7,13 +7,11 @@ aws_region          = "eu-central-1"
 image_tag           = "0.0.1"
 app_count           = 2
 working_dir         =  "/home/ubuntu/semester_project/html"
-
 github_path_url     = "https://github.com/Yagorus/semester_project"
 git_trigger        = "PUSH"
 git_pattern_branch  = "^refs/heads/main$"
-buildspec_path      = "providers/dev"
+buildspec_path      = "/home/ubuntu/semester_project/providers/dev"
 buildspec_file      = "buildspec.yml"
-
 }
 
 inputs = {
