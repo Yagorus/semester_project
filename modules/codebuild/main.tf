@@ -56,9 +56,6 @@ resource "aws_codebuild_webhook" "develop_webhook" {
       pattern = var.git_trigger
     }
 
-    filter {
-      type = "HEAD_REF"
-      pattern = var.git_pattern_branch
-    }
+    
   }
 }
