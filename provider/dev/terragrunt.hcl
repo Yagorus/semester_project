@@ -8,8 +8,7 @@ image_tag           = "0.0.1"
 app_count           = 2
 working_dir         =  "/home/ubuntu/semester_project/html"
 github_path_url     = "https://github.com/Yagorus/semester_project"
-git_trigger        = "PUSH"
-git_pattern_branch  = "^refs/heads/main$"
+git_trigger        = "PUSH"s
 buildspec_path      = "providers/dev"
 buildspec_file      = "buildspec.yml"
 }
@@ -26,7 +25,6 @@ inputs = {
     working_dir         = local.working_dir
     github_path_url     = local.github_path_url
     git_trigger         = local.git_trigger
-    git_pattern_branch  = local.git_pattern_branch
     buildspec_file      = local.buildspec_file
     buildspec_path      = local.buildspec_path
     
