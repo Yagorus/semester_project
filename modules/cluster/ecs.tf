@@ -12,14 +12,14 @@ data "template_file" "cb_bot" {
 }
 */
 resource "aws_ecs_cluster" "aws_ecs_cluster" {
-  /*
+  
   depends_on = [
     aws_ecs_capacity_provider.capacity_provider,
     aws_autoscaling_group.autoscale
   ]
-  */
+  
   name = "${var.app_name}-${var.environment}-cluster"
-  #capacity_providers = [aws_ecs_capacity_provider.capacity_provider.name]
+  capacity_providers = [aws_ecs_capacity_provider.capacity_provider.name]
   tags = {
     Name = "${var.app_name}-${var.environment}-cluster"
   }
@@ -66,15 +66,15 @@ resource "aws_ecs_service" "main" {
     container_port   = var.app_port
   }
 
-/*
+
   capacity_provider_strategy {
     capacity_provider = aws_ecs_capacity_provider.capacity_provider.name
     weight = 1
     base = 0
   }
-*/
+
 }
-/*
+
 resource "aws_ecs_capacity_provider" "capacity_provider" {
   name = "${var.app_name}-${var.environment}-capacity-provider"
 
@@ -90,4 +90,3 @@ resource "aws_ecs_capacity_provider" "capacity_provider" {
     }
   }
 }
-*/
